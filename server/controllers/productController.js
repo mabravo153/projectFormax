@@ -8,7 +8,7 @@ exports.show = async (req,res) => {
     let data; 
 
     try {
-        const products = await productModel.findAll();
+        const products = await productModel.findAll({ limit: 100 });
 
         if(products.length){
             data = {
